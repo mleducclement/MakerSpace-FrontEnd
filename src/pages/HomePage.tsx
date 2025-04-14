@@ -1,6 +1,10 @@
-﻿const HomePage = () => {
+﻿import {Heading} from "@chakra-ui/react";
+
+const HomePage = () => {
   return (
-    <h1>Hello World!</h1>
+    <>
+      <Heading>MakerSpace</Heading>
+    </>
   );
 };
 
