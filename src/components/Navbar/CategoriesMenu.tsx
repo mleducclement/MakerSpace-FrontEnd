@@ -5,16 +5,16 @@ const CategoriesMenu = () => {
   return (
     <Menu.Root>
       <Menu.Trigger asChild>
-        <HStack paddingX={2} marginStart={5} cursor="pointer" borderRadius="lg"
+        <HStack paddingX={2} marginStart={{base: 0, md: 5}} cursor="pointer" borderRadius="lg"
                 transition="all 0.10s ease-in"
                 _hover={{
                   bg: "gray.300",
                   padding: 2
                 }}>
-          <Icon size="lg">
+          <Icon size="lg" color="gray.700">
             <RxHamburgerMenu/>
           </Icon>
-          <Text>Categories</Text>
+          <Text hideBelow="md">Categories</Text>
         </HStack>
       </Menu.Trigger>
       <Portal>
