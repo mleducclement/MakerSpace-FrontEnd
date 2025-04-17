@@ -1,9 +1,9 @@
-﻿import {Heading} from "@chakra-ui/react";
+﻿import NavBar from "@/components/NavBar.tsx";
 
 const HomePage = () => {
   return (
     <>
-      <Heading>MakerSpace</Heading>
+      <NavBar/>
     </>
   );
 };
