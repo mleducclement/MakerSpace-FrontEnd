@@ -1,9 +1,9 @@
-﻿import NavBar from "@/components/NavBar.tsx";
+﻿import PromoGrid from "@/components/PromoGrid";
 
 const HomePage = () => {
   return (
     <>
-      <NavBar/>
+      <PromoGrid />
     </>
   );
 };
