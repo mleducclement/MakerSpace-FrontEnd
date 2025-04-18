@@ -54,6 +54,7 @@ const BustedDeals = () => {
                   _hover={{bg: "orange.300"}}
                   disabled={!canScrollLeft}
                   onClick={scrollLeft}
+                  boxShadow="inset"
           >
             <FaCaretLeft/>
           </Button>
@@ -63,6 +64,7 @@ const BustedDeals = () => {
                   _hover={{bg: "orange.300"}}
                   disabled={!canScrollRight}
                   onClick={scrollRight}
+                  boxShadow="inset"
           >
             <FaCaretRight/>
           </Button>
@@ -70,6 +72,7 @@ const BustedDeals = () => {
       </HStack>
       <Box w="100%" px={8} position="relative" overflow="hidden">
         <Flex ref={carouselRef}
+              p={4}
               gap={3}
               css={{"&::-webkit-scrollbar": {display: "none"}}}
               overflowX="auto"

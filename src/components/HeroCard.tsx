@@ -3,7 +3,7 @@
 const HeroCard = () => {
   const arcPath = useBreakpointValue({
     base: `M0,0 L0,50 A50,50 0 0 1 100,50 L100,0 Z`,
-    md: `M0,0 50,0 A50,50 0 0 0 50,100 L0,100 Z`
+    md: `M0,0 55,0 A50,50 0 0 0 50,100 L0,100 Z`
   });
 
   return (
@@ -42,11 +42,12 @@ const HeroCard = () => {
         <chakra.svg viewBox="0 0 100 100"
                     preserveAspectRatio="none"
                     position="absolute"
-                    left={{base: " 0", md: "-1px"}}
+                    left={{base: "0", md: "-1px"}}
                     top={{base: "-1px", md: "0"}}
-                    height={{base: "300px", md: "100%"}}
+                    height={{base: "calc(300px + 2px)", md: "calc(100% + 2px)"}}
                     width={{base: "100%", md: "200px"}}
                     zIndex={2}
+                    pointerEvents="none"
         >
           <path d={arcPath} fill="#fed7aa"/>
         </chakra.svg>
