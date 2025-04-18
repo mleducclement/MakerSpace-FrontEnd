@@ -54,7 +54,7 @@ const BustedDeals = () => {
                   _hover={{bg: "orange.300"}}
                   disabled={!canScrollLeft}
                   onClick={scrollLeft}
-                  boxShadow="inset"
+                  boxShadow="0 4px 8px 0 rgba(0,0,0,0.5)"
           >
             <FaCaretLeft/>
           </Button>
@@ -64,7 +64,7 @@ const BustedDeals = () => {
                   _hover={{bg: "orange.300"}}
                   disabled={!canScrollRight}
                   onClick={scrollRight}
-                  boxShadow="inset"
+                  boxShadow="0 4px 8px 0 rgba(0,0,0,0.5)"
           >
             <FaCaretRight/>
           </Button>
