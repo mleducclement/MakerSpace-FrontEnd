@@ -11,7 +11,7 @@ const NavBarIcons = () => {
   return (
     <HStack w={{base: "50%", md: "100%"}} margin="auto" gap={3} justifyContent="space-between">
       <Icon size="md">
-        <FaHeart />
+        <FaHeart/>
       </Icon>
       <Icon size="lg">
         <RiShoppingCartLine/>

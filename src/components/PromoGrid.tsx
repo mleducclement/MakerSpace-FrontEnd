@@ -1,6 +1,6 @@
 ﻿import {GridItem, SimpleGrid} from "@chakra-ui/react";
 import SideKickCard from "@/components/SideKickCard.tsx";
-import HeroCard from "@/components/HeroCard/HeroCard.tsx";
+import HeroCard from "@/components/HeroCard.tsx";
 
 const PromoGrid = () => {
 
