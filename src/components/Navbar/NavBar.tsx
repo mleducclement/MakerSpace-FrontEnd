@@ -3,7 +3,7 @@ import logo from "@/assets/makerspace-logo.svg";
 import CategoriesMenu from "@/components/Navbar/CategoriesMenu.tsx";
 import SearchBar from "@/components/SearchBar.tsx";
 import NavBarIcons from "@/components/Navbar/NavBarIcons.tsx";
-import {MAX_PAGE_WIDTH} from "@/constants/sizeConstants.ts";
+import {MAX_PAGE_WIDTH} from "@/constants/constants.ts";
 
 const NavBar = () => {
   return (

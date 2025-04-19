@@ -1,4 +1,5 @@
 ﻿import {Box, Button, chakra, Flex, Heading, Image, Text, useBreakpointValue} from "@chakra-ui/react";
+import {PLACEHOLDER_IMAGE_URL} from "@/constants/constants.ts";
 
 const HeroCard = () => {
   const arcPath = useBreakpointValue({
@@ -6,6 +7,7 @@ const HeroCard = () => {
     md: `M0,0 55,0 A50,50 0 0 0 50,100 L0,100 Z`
   });
 
+  // TODO: Change some styling on CTA
   return (
     <Flex h="full"
           minHeight="300px"
@@ -51,7 +53,7 @@ const HeroCard = () => {
         >
           <path d={arcPath} fill="#fed7aa"/>
         </chakra.svg>
-        <Image src="https://picsum.photos/1280/720" alt="card visual" objectFit="cover" w="100%" h="100%"/>
+        <Image src={PLACEHOLDER_IMAGE_URL} alt="card visual" objectFit="cover" w="100%" h="100%"/>
       </Box>
     </Flex>
   );

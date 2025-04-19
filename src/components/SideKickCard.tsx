@@ -1,4 +1,5 @@
 ﻿import {Box, Heading, Image, Text} from "@chakra-ui/react";
+import {PLACEHOLDER_IMAGE_URL} from "@/constants/constants.ts";
 
 const SideKickCard = () => {
   return (
@@ -20,7 +21,7 @@ const SideKickCard = () => {
              h="100%"
              top="0"
              left="0"
-             src="https://picsum.photos/1280/720"
+             src={PLACEHOLDER_IMAGE_URL}
              alt="card visual"
              objectFit="cover"
              zIndex={0}/>

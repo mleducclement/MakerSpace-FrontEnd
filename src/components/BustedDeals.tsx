@@ -4,7 +4,6 @@ import {Box, Button, Flex, Heading, HStack} from "@chakra-ui/react";
 import {FaCaretLeft, FaCaretRight} from "react-icons/fa";
 
 import DealCard from "@/components/DealCard.tsx";
-import "./BustedDeals.css";
 
 const BustedDeals = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -55,6 +54,7 @@ const BustedDeals = () => {
                   disabled={!canScrollLeft}
                   onClick={scrollLeft}
                   boxShadow="0 4px 8px 0 rgba(0,0,0,0.5)"
+                  display={{base: "none", md: "block"}}
           >
             <FaCaretLeft/>
           </Button>
@@ -65,6 +65,7 @@ const BustedDeals = () => {
                   disabled={!canScrollRight}
                   onClick={scrollRight}
                   boxShadow="0 4px 8px 0 rgba(0,0,0,0.5)"
+                  display={{base: "none", md: "block"}}
           >
             <FaCaretRight/>
           </Button>
@@ -72,13 +73,13 @@ const BustedDeals = () => {
       </HStack>
       <Box w="100%" px={8} position="relative" overflow="hidden">
         <Flex ref={carouselRef}
-              p={4}
+              p="0 1rem 1rem 0"
               gap={3}
               css={{"&::-webkit-scrollbar": {display: "none"}}}
               overflowX="auto"
               scrollBehavior="smooth"
         >
-          {Array.from({length: 12}).map((_, i) => <DealCard key={i}/>)}
+          {Array.from({length: 12}).map((_, i) => <DealCard key={i} id={i} />)}
         </Flex>
         <Box position="absolute" top={0} right={0} h="100%" w="150px" pointerEvents="none" zIndex={1}
              bgImage="linear-gradient(-90deg, rgba(255,255,255, 0.9), transparent)"/>

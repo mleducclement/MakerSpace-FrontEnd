@@ -1,8 +1,15 @@
-﻿import {Badge, Card, HStack, Image, Text} from "@chakra-ui/react";
+﻿import {Card, HStack, Image, Text} from "@chakra-ui/react";
 
-const DealCard = () => {
+import {PLACEHOLDER_IMAGE_URL} from "@/constants/constants.ts";
+import RatingBadge from "@/components/RatingBadge.tsx";
+
+interface Props {
+  id: number;
+}
+
+const DealCard = ({id}: Props) => {
   const responsiveWidths = {
-    base: "80%",
+    base: "60%",
     sm: "40%",
     md: "37%",
     lg: "30%",
@@ -19,14 +26,12 @@ const DealCard = () => {
                  boxShadow: "lg"
                }}
     >
-      <Image src="https://picsum.photos/1280/720" borderTopRadius={16}/>
+      <Image src={PLACEHOLDER_IMAGE_URL + id} borderTopRadius={16}/>
       <Card.Body>
-        <HStack justifyContent="space-between">
-          <Text>Product 1</Text>
-          <Badge>4.7</Badge>
-        </HStack>
+        <Text>Product with a pretty long name</Text>
+        <RatingBadge/>
         <HStack flexDirection={{base: "column", lg: "row"}} alignItems={{base: "start", lg: "center"}} gap={1}>
-          <Text color="green.600" fontSize="1.2rem" fontWeight="bold">CA$11249.99</Text>
+          <Text color="green.600" fontSize={{base: "1rem", sm: "1.2rem"}} fontWeight="bold">CA$11249.99</Text>
           <Text color="gray.500" fontSize="0.8rem" textDecoration="line-through">CA$11299.99</Text>
         </HStack>
       </Card.Body>
