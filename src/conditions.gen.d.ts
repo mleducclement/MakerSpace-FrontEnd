@@ -1,3 +1,4 @@
+export {};
 export interface Conditions {
   /** `@media (hover: hover),&:is(:hover, [data-hover]):not(:disabled, [data-disabled])` */
   _hover: string

@@ -1,3 +1,4 @@
+export {};
 export type Token =
   | "aspectRatios.square"
   | "aspectRatios.landscape"
