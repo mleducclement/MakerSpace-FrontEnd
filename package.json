@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "prepare": "husky",
-    "typegen": "npx @chakra-ui/cli typegen ./theme.ts --outdir . && rm -f prop-types.gen.d.ts recipes.gen.d.ts system.gen.d.ts",
+    "typegen": "npx @chakra-ui/cli typegen ./theme.ts --outdir ./src && rm -f src/prop-types.gen.d.ts src/recipes.gen.d.ts src/system.gen.d.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
