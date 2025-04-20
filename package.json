@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "typegen": "npx @chakra-ui/cli typegen ./theme.ts --outdir . && rm -f prop-types.gen.d.ts recipes.gen.d.ts system.gen.d.ts",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.16.0",
