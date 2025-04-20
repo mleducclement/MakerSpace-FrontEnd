@@ -1,14 +1,19 @@
 ﻿import PromoGrid from "@/components/PromoGrid";
-import BustedDeals from "@/components/BustedDeals.tsx";
-import CategoriesGrid from "@/components/CategoriesGrid.tsx";
+import SizzlingDeals from "@/components/SizzlingDeals.tsx";
+import PopularCategories from "@/components/PopularCategories.tsx";
+import RecentProducts from "@/components/RecentProducts.tsx";
+import {Box, VStack} from "@chakra-ui/react";
 
 const HomePage = () => {
   return (
-    <>
-      <PromoGrid />
-      <BustedDeals />
-      <CategoriesGrid />
-    </>
+    <Box p={8}>
+      <VStack gap={{base: 14, md: 20}} align="stretch">
+        <PromoGrid/>
+        <SizzlingDeals/>
+        <PopularCategories/>
+        <RecentProducts/>
+      </VStack>
+    </Box>
   );
 };
 

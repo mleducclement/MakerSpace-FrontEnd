@@ -9,8 +9,8 @@ interface Props {
 
 const DealCard = ({id}: Props) => {
   const responsiveWidths = {
-    base: "60%",
-    sm: "40%",
+    base: "66vw",
+    mid: "35vw",
     md: "37%",
     lg: "30%",
     xl: "23%"
@@ -28,11 +28,11 @@ const DealCard = ({id}: Props) => {
     >
       <Image src={PLACEHOLDER_IMAGE_URL + id} borderTopRadius={16}/>
       <Card.Body>
-        <Text>Product with a pretty long name</Text>
+        <Text>Product with a...</Text>
         <RatingBadge/>
         <HStack flexDirection={{base: "column", lg: "row"}} alignItems={{base: "start", lg: "center"}} gap={1}>
-          <Text color="green.600" fontSize={{base: "1rem", sm: "1.2rem"}} fontWeight="bold">CA$11249.99</Text>
-          <Text color="gray.500" fontSize="0.8rem" textDecoration="line-through">CA$11299.99</Text>
+          <Text color="green.600" fontSize={{base: "1rem", sm: "1.2rem"}} fontWeight="bold">CA$1249.99</Text>
+          <Text color="gray.500" fontSize="0.8rem" textDecoration="line-through">CA$1299.99</Text>
         </HStack>
       </Card.Body>
     </Card.Root>
