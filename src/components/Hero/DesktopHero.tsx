@@ -12,6 +12,8 @@ const DesktopHero = ({title, subtitle, ctaText, imageUrl}: HeroContentProps) => 
           borderRadius={16}
           flexDirection="row"
           position="relative"
+          border="1px solid"
+          borderColor="gray.200"
     >
       <Flex w="50%"
             px={{sm: 4, mid: 6}}

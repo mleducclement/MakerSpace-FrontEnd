@@ -8,6 +8,8 @@ const SideKickCard = () => {
          h="full"
          overflow="hidden"
          borderRadius={16}
+         border="1px solid"
+         borderColor="gray.200"
     >
       <Box position="absolute"
            top="0"

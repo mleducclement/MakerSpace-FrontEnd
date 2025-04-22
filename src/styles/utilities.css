@@ -1,0 +1,13 @@
+﻿.group:hover .hover-reveal {
+    opacity: 1;
+}
+
+.group:hover .slide-y {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.group:hover .slide-x {
+    opacity: 1;
+    transform: translateX(0);
+}

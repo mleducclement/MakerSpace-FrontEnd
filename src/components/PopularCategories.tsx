@@ -7,7 +7,7 @@ const PopularCategories = () => {
 
   const renderFlexLayout = () => {
     return (
-      <Flex justifyContent="space-between" px={32}>
+      <Flex justifyContent="space-between" px={{lg: 24, xl: 48}}>
         {categories.map((category, i) => <CategoryCard key={i} id={i}>{category}</CategoryCard>)}
       </Flex>
     );
@@ -15,7 +15,7 @@ const PopularCategories = () => {
 
   const renderGridLayout = () => {
     return (
-      <SimpleGrid columns={{base: 2, sm: 3}} w={{base: "100%", md: "60%"}} mx="auto" columnGap={{base: 9}} rowGap={{base: 6, md: 0}}>
+      <SimpleGrid columns={{base: 2, sm: 3}} w={{base: "100%", md: "70%"}} mx="auto" columnGap={{base: 9}} rowGap={{base: 6}}>
         {categories.map((category, i) => <CategoryCard key={i} id={i}>{category}</CategoryCard>)}
       </SimpleGrid>
     );
