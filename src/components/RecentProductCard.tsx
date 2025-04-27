@@ -12,6 +12,17 @@ interface Props {
 const RecentProductCard = ({id}: Props) => {
   const [favorited, setFavorited] = useState<boolean>(false);
 
+  const slideYStyles = (translateYValue: number, transitionSecondDuration: number) => {
+    return {
+      className: "slide-y",
+      position: "absolute" as const,
+      opacity: { base: 1, lg: 0},
+      transition: `all ${transitionSecondDuration}s ease-in`,
+      transform: {base: "none", lg: `translateY(${translateYValue}px)`},
+      zIndex: 2
+    }
+  }
+
   return (
     <Box className="group"
          position="relative"
@@ -30,46 +41,31 @@ const RecentProductCard = ({id}: Props) => {
           <Image src={PLACEHOLDER_IMAGE_URL + id} borderRadius={16} zIndex={1}/>
         </AspectRatio>
       </GridItem>
-      <Text className="slide-y"
-            position="absolute"
+      <Text {...slideYStyles(20, 0.1)}
             w="full"
             fontSize={{base: "xs", sm: "sm"}}
             textAlign="center"
             bottom={15}
-            zIndex={2}
             color="gray.200"
             bg="rgba(0,0,0,0.7)"
-            opacity={{base: 1, lg: 0}}
-            transition="all 0.1s ease-in"
-            transform={{base: "none", lg: "translateY(20px)"}}
       >
         Personalized logo keychains
       </Text>
-      <Badge position="absolute"
-             className="slide-y"
+      <Badge {...slideYStyles(10, 0.15)}
              top={2}
              left={2}
              borderRadius={16}
              size="sm"
-             zIndex={2}
-             opacity={{base: 1, lg: 0}}
-             transition="all 0.15s ease-in"
-             transform={{base: "none", lg: "translateY(10px)"}}
       >
         CA$894.99
       </Badge>
-      <Icon className="slide-y"
-            position="absolute"
+      <Icon {...slideYStyles(10, 0.1)}
             p={1}
             size="xl"
             color="red.400"
             top={2} right={2}
-            zIndex={2}
             bg="white"
             borderRadius="50%"
-            opacity={{base: 1, lg: 0}}
-            transition="all 0.1s ease-in"
-            transform={{base: "none", lg: "translateY(10px)"}}
             onClick={() => setFavorited(!favorited)}
       >
         {favorited ? <MdFavorite /> : <MdFavoriteBorder />}
