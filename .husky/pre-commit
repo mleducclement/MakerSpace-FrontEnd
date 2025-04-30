@@ -1,0 +1,19 @@
+
+#Hash of type files
+#BEFORE_HASH=$(openssl dgst -sha256 ./src/token.gen.d.ts ./src/conditions.gen.d.ts 2>/dev/null)
+
+#Run chakra typegen
+#npm run typegen || exit 1
+
+#Get new hash after generation
+#AFTER_HASH=$(openssl dgst -sha256 ./src/token.gen.d.ts ./src/conditions.gen.d.ts 2>/dev/null)
+
+#if [ "$BEFORE_HASH" != "$AFTER_HASH" ]; then
+#    echo "🔁 Chakra tokens changed - staging for commit"
+#    git add ./src/token.gen.d.ts ./src/conditions.gen.d.ts
+#else
+#    echo "✅ Chakra tokens unchanged - skipping"
+#fi
+
+#Typesafety check
+npm run typecheck || exit 1
