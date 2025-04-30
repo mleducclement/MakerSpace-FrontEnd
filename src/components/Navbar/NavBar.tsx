@@ -29,17 +29,17 @@ const NavBar = () => {
     >
       <Flex p={2}
             as="nav"
-            justifyContent={{base: "center", sm: "space-between"}}
-            alignItems={{base: "stretch", sm: "center"}}
+            justifyContent={{base: "center", mid: "space-between"}}
+            alignItems={{base: "stretch", mid: "center"}}
             maxWidth={MAX_PAGE_WIDTH}
             flexGrow={2}
-            flexDir={{base: "column", sm: "row"}}
+            flexDir={{base: "column", mid: "row"}}
             gap={2}
       >
-        <Flex alignItems="center" order={{base: 1, sm: 1}}>
+        <Flex alignItems="center" order={{base: 1, mid: 1}}>
           <Image src={logo} alt="logo" boxSize="36px" padding="0.15rem"/>
         </Flex>
-        <Flex flexGrow={2} order={{base: 3, sm: 2}} py={3}>
+        <Flex flexGrow={2} order={{base: 3, mid: 2}} py={3}>
           <CategoriesMenu/>
           <SearchBar/>
         </Flex>

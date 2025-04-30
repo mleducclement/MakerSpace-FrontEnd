@@ -9,10 +9,10 @@ const NavBarIcons = () => {
 
   // TODO: Add interactive layer to icons
   return (
-    <HStack w={{base: "50%", sm: "100%"}}
+    <HStack w={{base: "50%", mid: "100%"}}
             margin="auto"
-            gap={{base: 6, sm: 3}}
-            justifyContent={{base: "center", sm: "space-between"}}
+            gap={{base: 6, mid: 3}}
+            justifyContent={{base: "center", mid: "space-between"}}
     >
       <IconButton size="md" variant="ghost">
         <FaHeart/>
