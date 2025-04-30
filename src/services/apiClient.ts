@@ -11,8 +11,8 @@ export class APIClient<T> {
     this.endpoint = endpoint;
   }
 
-  get = async (): Promise<T> => {
-    return (await instance.get(this.endpoint));
+  get = async () => {
+    return (await instance.get<T[]>(this.endpoint)).data;
   };
 }
 
